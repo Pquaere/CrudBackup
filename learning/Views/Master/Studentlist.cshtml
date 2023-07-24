@@ -1,0 +1,117 @@
+﻿@model learning.Models.Student
+@{
+    ViewBag.Title = "Studentlist";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Studentlist</h2>
+
+
+
+<div class="row page-titles">
+    <div class="ptitle">
+        <h4 class="mb-1 mt-0">Student List</h4>
+        <nav aria-label="breadcrumb" class="float-left">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#-">Master</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product List</li>
+            </ol>
+        </nav>
+    </div>
+    @*<div class="psearch">
+
+        </div>*@
+    <div class="pbutton">
+        <div class="right text-right">
+
+            <a href="/Admin/" class="btn btn-success">Add Product</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div id="no-more-tables">
+        <div class="row">
+            @{
+                string flag = (String)TempData["code"];
+                string msg = (string)TempData["msg"];
+                if (flag == "1")
+                {
+                    <strong>@msg</strong>
+                }
+                else
+                {<strong>@msg</strong>
+
+            }
+
+
+            }
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table">
+                            <table class="table">
+                                <tr>
+                                    <th>Sr.No</th>
+                                    <th>Name</th>
+                                    <th>Father Name</th>
+                                    <th> Mother Name</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Mobile</th>
+
+                                    <th>Photo</th>
+                                    <th>Signature</th>
+                                    <th></th>
+                                </tr>
+
+                                @if (Model.list != null)
+                                {
+                                    int i = 0;
+                                    foreach (var item in Model.list)
+                                    {
+                                        i++;
+                                        <tr>
+                                            <td>@(i)</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.FName</td>
+                                            <td>@item.MName</td>
+                                            <td>@item.City</td>
+                                            <td>@item.State</td>
+                                            <td>@item.Mob</td>
+                                            @if (!String.IsNullOrEmpty(item.Photo))
+                                            {
+                                                <td><img src="@item.Photo.Replace("~","")" height="100px" width="100px" /></td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                            }
+                                            @if (!String.IsNullOrEmpty(item.SignaturePath))
+                                            {
+
+                                                <td><img src="@item.SignaturePath.Replace("~","")" height="100px" width="100px" /></td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                            }
+
+
+                                        </tr>
+                                    }
+                                }
+                            </table>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

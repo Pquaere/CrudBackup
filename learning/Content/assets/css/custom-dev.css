@@ -1,0 +1,144 @@
+.main-body {
+    margin: 10px 0;
+    background: #fff;
+    border: solid 1px #AEAEAE;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    padding-bottom: 10px;
+}
+.slimScrollBar {
+    z-index: 10!important;
+    left: auto !important;
+    right: 1px !important;
+    display: block !important;
+}
+    .main-body .header {
+        border-bottom: solid 1px #AEAEAE;
+        padding: 10px 0 5px 0;
+    }
+
+        .main-body .header img.logo {
+            height: 75px;
+        }
+
+        .main-body .header .name-eng {
+            color: navy;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .main-body .header .name-hin {
+            color: rgb(197, 0, 0);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .main-body .header .univ-type {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+.pg-button {
+    border: solid 1px black;
+    box-shadow: 2px 2px 2px #000000;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+    .pg-button:hover {
+        background: rgb(255, 255, 211);
+        border-color: red;
+        box-shadow: 2px 2px 2px #f00;
+        box-shadow: 2px 2px 2px rgba(255, 0, 0, .4);
+    }
+
+/*Responsive Screen Size*/
+@media screen and (min-width: 351px) and (max-width: 1081px) {
+    .main-body .header img.logo {
+        height: 50px;
+    }
+
+    .main-body .header .name-eng {
+        color: navy;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .main-body .header .name-hin {
+        color: rgb(197, 0, 0);
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .main-body .header .univ-type {
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+/*Himanshu CSS*/
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media only screen and (max-width: 460px) {
+    h4.mb-1.mt-0 {
+        font-size: 16px;
+    }
+
+    .ptitle {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0px 0 15px;
+    }
+
+
+    .pbutton {
+        width: 100%;
+        text-align: right;
+        padding: 10px 0px 0 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .table-responsive {
+        overflow: scroll;
+    }
+}
+
+@media only screen and (min-width: 460px) and (max-width: 768px) {
+
+    .form-group label {
+        font-size: 10px;
+        color: #333;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1220px) {
+    h6.text-white {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .left-sidebar {
+        overflow: scroll !important;
+    }
+}
+
+
+
+
